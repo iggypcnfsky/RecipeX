@@ -16,7 +16,7 @@ struct RecipeTabView: View {
         TabView (selection: $tabIndex){
             
             //TAB 1 -- FEATURED
-            Text("Featured View")
+            RecipeFeatureView()
                 .tabItem {
                     VStack{
                         
@@ -39,7 +39,7 @@ struct RecipeTabView: View {
                 }
                 .tag(1)
             
-        }
+        }.environmentObject(RecipeModel())
         
         
     }
