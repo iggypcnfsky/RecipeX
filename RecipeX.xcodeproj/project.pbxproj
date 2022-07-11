@@ -17,6 +17,7 @@
 		DC8C818628744BDF0089C44E /* RecipeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8C818528744BDF0089C44E /* RecipeModel.swift */; };
 		DC8C818828744DA60089C44E /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8C818728744DA60089C44E /* DataService.swift */; };
 		DCE4079928783AF900796190 /* RecipeTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE4079828783AF900796190 /* RecipeTabView.swift */; };
+		DCE407B7287C34DE00796190 /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE407B6287C34DE00796190 /* Ingredient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		DC8C818528744BDF0089C44E /* RecipeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeModel.swift; sourceTree = "<group>"; };
 		DC8C818728744DA60089C44E /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		DCE4079828783AF900796190 /* RecipeTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeTabView.swift; sourceTree = "<group>"; };
+		DCE407B6287C34DE00796190 /* Ingredient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingredient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				DC8C818328744AC50089C44E /* Recipe.swift */,
+				DCE407B6287C34DE00796190 /* Ingredient.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -200,6 +203,7 @@
 				DC8C818628744BDF0089C44E /* RecipeModel.swift in Sources */,
 				DC8C8171287449C60089C44E /* ContentView.swift in Sources */,
 				DC8C816F287449C60089C44E /* RecipesProjectApp.swift in Sources */,
+				DCE407B7287C34DE00796190 /* Ingredient.swift in Sources */,
 				DC2C51842875A23600273915 /* RecipeDetail.swift in Sources */,
 				DC8C818828744DA60089C44E /* DataService.swift in Sources */,
 				DCE4079928783AF900796190 /* RecipeTabView.swift in Sources */,
