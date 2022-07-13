@@ -19,6 +19,7 @@
 		DCE4079928783AF900796190 /* RecipeTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE4079828783AF900796190 /* RecipeTabView.swift */; };
 		DCE407B7287C34DE00796190 /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE407B6287C34DE00796190 /* Ingredient.swift */; };
 		DCE407B9287C370900796190 /* RecipeFeatureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE407B8287C370900796190 /* RecipeFeatureView.swift */; };
+		DCE4080C287F0EDE00796190 /* Rational.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE4080B287F0EDE00796190 /* Rational.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		DCE4079828783AF900796190 /* RecipeTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeTabView.swift; sourceTree = "<group>"; };
 		DCE407B6287C34DE00796190 /* Ingredient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingredient.swift; sourceTree = "<group>"; };
 		DCE407B8287C370900796190 /* RecipeFeatureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeFeatureView.swift; sourceTree = "<group>"; };
+		DCE4080B287F0EDE00796190 /* Rational.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rational.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 		DC8C816D287449C60089C44E /* RecipesProject */ = {
 			isa = PBXGroup;
 			children = (
+				DCE4080A287F0ED600796190 /* Utilities */,
 				DC8C816E287449C60089C44E /* RecipesProjectApp.swift */,
 				DC8C818228744AB00089C44E /* Model */,
 				DC8C817F287449FE0089C44E /* Services */,
@@ -129,6 +132,14 @@
 				DCE407B6287C34DE00796190 /* Ingredient.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		DCE4080A287F0ED600796190 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				DCE4080B287F0EDE00796190 /* Rational.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -209,6 +220,7 @@
 				DC8C816F287449C60089C44E /* RecipesProjectApp.swift in Sources */,
 				DCE407B7287C34DE00796190 /* Ingredient.swift in Sources */,
 				DC2C51842875A23600273915 /* RecipeDetail.swift in Sources */,
+				DCE4080C287F0EDE00796190 /* Rational.swift in Sources */,
 				DC8C818828744DA60089C44E /* DataService.swift in Sources */,
 				DCE4079928783AF900796190 /* RecipeTabView.swift in Sources */,
 			);
