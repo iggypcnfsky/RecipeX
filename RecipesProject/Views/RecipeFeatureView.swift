@@ -10,8 +10,13 @@ import SwiftUI
 struct RecipeFeatureView: View {
     
     @EnvironmentObject var model:RecipeModel
-    
     @State var isDetailViewShowing = false
+    @State var mealInView:Int = 0
+    
+    
+//    init() { TO EXECUTE SOME CODE WHEN VIEW IS INITLIAZED
+//        setFeaturedIndex()
+//    }
     
     var body: some View {
     
@@ -24,8 +29,9 @@ struct RecipeFeatureView: View {
                 .padding(.leading)
                 .font(.largeTitle)
             
+            
             GeometryReader { geo in
-                TabView {
+                TabView(selection: $mealInView) {
                     
                     ForEach (0..<model.recipes.count, id: \.self) { index in
                         
@@ -37,6 +43,7 @@ struct RecipeFeatureView: View {
                             
                             Button {
                                 isDetailViewShowing.toggle()
+                               //mealInView = index
                             } label: {
                                 ZStack {
                                     
@@ -68,6 +75,7 @@ struct RecipeFeatureView: View {
                                 .cornerRadius(20)
                                 //.shadow(radius: 20)
                                 .shadow(color: Color(.init(srgbRed: 0, green: 0, blue: 0, alpha: 0.3)), radius: 18, x: -1, y: 10)
+                                //.tag(mealInView)
 
                             
                             
@@ -84,16 +92,46 @@ struct RecipeFeatureView: View {
             
             VStack(alignment: .leading, spacing: 10) {
                 
-                Text("Text")
-                Text("Text")
-                Text("Text")
-                Text("Text")
+                Text("Preparation Time:")
+                    .font(.headline)
+                Text(model.recipes[mealInView].prepTime)
+                
+                Text("Highlights")
+                    .font(.headline)
+                HStack(spacing: 4) {
+                    ForEach(0..<model.recipes[mealInView].highlights.count, id: \.self) {index in
+                        if index == model.recipes[mealInView].highlights.count - 1 {
+                            Text(model.recipes[mealInView].highlights[index] + ".")
+                        } else {
+                            Text(model.recipes[mealInView].highlights[index] + ",")
+                        }
+                            
+                    }
+                    
+                }
+                
                 
             }.padding()
             
         } //:VSTACK
+        .onAppear {
+            setFeaturedIndex()
+        }
         
     }
+    
+    func setFeaturedIndex() {
+        
+        //finding index of the first recipe
+        var index = model.recipes.firstIndex { (recipe) -> Bool in
+            return recipe.featured
+        }
+        
+        mealInView = index ?? 0
+        
+    }
+    
+    
 }
 
 struct RecipeFeatureView_Previews: PreviewProvider {
