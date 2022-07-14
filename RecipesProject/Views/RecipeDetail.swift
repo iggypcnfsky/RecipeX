@@ -23,11 +23,15 @@ struct RecipeDetail: View {
                 Image(recipe.image)
                     .resizable()
                     .scaledToFill()
+                
+                Text(recipe.name)
+                    .font(.title2)
+                    .padding(.top, 5)
+                    .padding(.horizontal, 10)
                     
                 
                 Text("Pick your serving size:")
                     .font(.footnote)
-                    .padding(.top, 5)
                     .padding(.horizontal, 10)
                 Picker("Pick your serving size", selection: $servingSize) {
                     Text("2").tag(2)
@@ -73,7 +77,7 @@ struct RecipeDetail: View {
                 
             } //:MAIN VSTACK
 
-        }.navigationBarTitle(recipe.name)
+        }//.navigationBarTitle(recipe.name)
             .ignoresSafeArea()
 
         
